@@ -1,0 +1,163 @@
+/* ------ Grupo 00 -------
+ * Rodrigo Correia - 58180
+ * Laura Cunha     - 58188
+ * João Pereira    - 58189
+ * -----------------------
+ */
+
+html,
+body,
+canvas {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+canvas {
+    display: block;
+    transition: width 1s linear;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+canvas:focus {
+    outline: none;
+}
+
+input[type='checkbox'] {
+    accent-color: rgb(255, 187, 0);
+}
+
+#overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.loading-screen {
+    background-image: url("textures/space3.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 1em;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 1s ease;
+    position: absolute;
+}
+
+.loading-screen>h1 {
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.loading-screen>progress {
+    width: 500px;
+    height: 22px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.loading-screen>p {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    font-size: 1.1em;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.options-menu {
+    background-color: rgba(120, 120, 120, 0.3);
+    backdrop-filter: blur(30px);
+    border-right: 2px solid rgba(80, 80, 80, 0.5);
+    border-bottom: 2px solid rgba(80, 80, 80, 0.5);
+    border-bottom-right-radius: 20px;
+    width: 20%;
+    height: 32%;
+    pointer-events: all;
+    padding: 1em;
+    box-sizing: border-box;
+    color: white;
+}
+
+.options-menu>h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0;
+    padding: 0 0 .4em 0;
+    border-bottom: 2px solid rgba(80, 80, 80, 0.5);
+}
+
+
+.specular-slider {
+    margin-top: 0.5em;
+    display: flex;
+    align-items: start;
+    width: 100%;
+    justify-content: left;
+    gap: 0.4em;
+}
+
+.specular-slider-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.specular-slider-range-values-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#specular-slider-value-label {
+    margin-left: 0.5em;
+}
+
+#specular-slider {
+    appearance: none;
+    width: 100%;
+    outline: none;
+    height: 10px;
+    border-radius: 100px;
+}
+
+#specular-slider::-webkit-slider-thumb {
+    appearance: none;
+    background-color: rgb(255, 187, 0);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
+#specular-slider::-moz-range-thumb {
+    appearance: none;
+    background-color: rgb(255, 187, 0);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}

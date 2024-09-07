@@ -1,0 +1,65 @@
+<!--Grupo 00-->
+<!--Rodrigo Correia - 58180-->
+<!--Laura Cunha     - 58188-->
+<!--João Pereira    - 58189-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 2 - Grupo 00</title>
+    <link rel="stylesheet" href="index.css">
+
+    <script defer src="index.js" type="module"></script>
+</head>
+
+<body>
+
+    <div class="loading-screen">
+        <h1>LOADING SCENE</h1>
+        <progress max="100" value="0"></progress>
+        <p id="loading-text">Loading Planets</p>
+    </div>
+
+    <canvas class="hidden" tabindex="0">
+    </canvas>
+
+    <div class="overlay hidden">
+        <div class="options-menu">
+            <h1>Options Menu</h1>
+            <p id="fps-counter">FPS: 60</p>
+
+            <h2>Light:</h2>
+            <label for="shader-select">Shader type:</label>
+            <select id="shader-select" name="">
+                <option value="phong">Phong</option>
+                <option value="gouraud">Gouraud</option>
+            </select>
+            <div class="specular-slider">
+                <label for="specular-slider">Specular ammount:</label>
+                <div class="specular-slider-container">
+                    <input type="range" min="0" max="100" value="10" class="slider" id="specular-slider"
+                        name="specular-slider">
+                    <div class="specular-slider-range-values-container">
+                        <label for="specular-slider">0</label>
+                        <label for="specular-slider">10</label>
+                    </div>
+                </div>
+                <label for="specular-slider" id="specular-slider-value-label">1</label>
+            </div>
+            <input type="checkbox" id="diffuse-light" checked="true">
+            <label for="diffuse-light"> Diffuse light</label>
+            <input type="checkbox" id="ambient-light" checked="true">
+            <label for="ambient-light"> Ambient light</label>
+            <h2>Extras:</h2>
+            <div class="stop-planets-div">
+                <input type="checkbox" id="stop-planets">
+                <label for="stop-planets"> Stop planets & asteroids</label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
